@@ -1,1 +1,15 @@
-<p>lista works!</p>
+<mat-table [dataSource]="moedas" class="mat-elevation-z8">
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Moeda </mat-header-cell>
+      <mat-cell *matCellDef="let currency"> {{ currency.symbol }} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="rate">
+      <mat-header-cell *matHeaderCellDef> Taxa </mat-header-cell>
+      <mat-cell *matCellDef="let currency"> {{ currency.rate }} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="['symbol', 'rate']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['symbol', 'rate'];"></mat-row>
+  </mat-table>
+  

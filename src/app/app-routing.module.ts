@@ -4,6 +4,7 @@ import { ConversorComponent } from './paginas/conversor/conversor.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { HistoricoComponent } from './paginas/historico/historico.component';
 import { ListaComponent } from './paginas/lista/lista.component';
+import { TabelaComponent } from './componentes/tabela/tabela.component';
 
 
 const routes: Routes = [

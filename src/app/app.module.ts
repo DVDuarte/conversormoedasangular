@@ -9,7 +9,7 @@ import { HomeComponent } from './paginas/home/home.component';
 import { ConversorComponent } from './paginas/conversor/conversor.component';
 import { ListaComponent } from './paginas/lista/lista.component';
 import { HistoricoComponent } from './paginas/historico/historico.component';
-import { TabelaComponent } from './tabela/tabela.component';
+import { TabelaComponent } from './componentes/tabela/tabela.component';
 
 
 @NgModule({

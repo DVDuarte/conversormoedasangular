@@ -1,26 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { MoedasService } from '../../services/moedas.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.css']
+  styleUrl: './lista.component.scss'
 })
-export class ListaComponent implements OnInit {
-  moedas: any[] = []; 
+export class ListaComponent {
 
-  constructor(private moedasService: MoedasService) { }
-
-  ngOnInit(): void {
-    this.loadMoedas(); 
-  }
-
-  loadMoedas(): void {
-    this.moedasService.getMoedas().subscribe(data => {
-      this.moedas = Object.entries(data.rates).map(([key, value]) => ({ symbol: key, rate: value }));
-      console.log(this.moedas); 
-    }, error => {
-      console.error('Erro ao carregar moedas:', error);
-    });
-  }
 }

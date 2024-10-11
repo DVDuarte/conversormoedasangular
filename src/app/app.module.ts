@@ -15,7 +15,7 @@ import { HistoricoComponent } from './paginas/historico/historico.component';
 import { TopoComponent } from './componentes/topo/topo.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { TabelaComponent } from './componentes/tabela/tabela.component';
-
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { TabelaComponent } from './componentes/tabela/tabela.component';
     MatInputModule,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })

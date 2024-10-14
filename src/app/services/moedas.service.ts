@@ -16,7 +16,7 @@ export class MoedasService {
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer '+environment.apiKey
+        'Authorization': 'Bearer' + environment.apiKey
       })
     };
   }

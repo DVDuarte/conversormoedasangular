@@ -12,6 +12,7 @@ export interface IMoedas {
 }
 
 export interface IMoedasResponse {
+  conversion_rates: any;
   page: number;
   total_pages: number;
   total_results: number;
@@ -39,18 +40,22 @@ export class TabelaComponent implements AfterViewInit {
     this.moedasService.listarMoedas().subscribe(
       {
         next: (res) => {
-          this.dataSource = new MatTableDataSource(res.results);
+          const rates = res.conversion_rates; 
+          const moedasArray = Object.keys(rates).map(key => ({ moeda: key, taxa: rates[key] })); 
+          this.dataSource = new MatTableDataSource(moedasArray); 
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
         },
         error: (err) => {
+          console.error('Erro ao carregar dados da API:', err);
         },
         complete: () => {
-          console.log("Completou");
+          console.log("Dados carregados com sucesso");
         }
       }
     );
   }
+  
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

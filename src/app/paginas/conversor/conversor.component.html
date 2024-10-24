@@ -1,2 +1,32 @@
 <h1>Conversor de Moedas</h1>
-<p>Escolha as moedas para realizar a conversão.</p>
+
+<mat-form-field>
+  <mat-label>Moeda de origem</mat-label>
+  <mat-select [(value)]="moedaOrigem">
+    <mat-option *ngFor="let moeda of moedas" [value]="moeda">{{ moeda }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<br> 
+
+<mat-form-field>
+  <mat-label>Moeda de destino</mat-label>
+  <mat-select [(value)]="moedaDestino">
+    <mat-option *ngFor="let moeda of moedas" [value]="moeda">{{ moeda }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<br> 
+
+<mat-form-field>
+  <mat-label>Valor</mat-label>
+  <input matInput [(ngModel)]="valor" type="number" placeholder="Digite o valor">
+</mat-form-field>
+
+<br> 
+
+<button mat-raised-button color="primary" (click)="converter()">Converter</button>
+
+<div *ngIf="resultado">
+  <h2>Resultado: {{ valor }} {{ moedaOrigem }} = {{ resultado }} {{ moedaDestino }}</h2>
+</div>

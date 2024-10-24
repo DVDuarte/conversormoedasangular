@@ -4,6 +4,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +19,7 @@ import { TopoComponent } from './componentes/topo/topo.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { TabelaComponent } from './componentes/tabela/tabela.component';
 import { provideHttpClient } from '@angular/common/http';
+import { RodapeComponent } from './componentes/rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { provideHttpClient } from '@angular/common/http';
     ListaComponent,
     HistoricoComponent,
     TopoComponent,
-    TabelaComponent
+    TabelaComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,9 @@ import { provideHttpClient } from '@angular/common/http';
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync(),

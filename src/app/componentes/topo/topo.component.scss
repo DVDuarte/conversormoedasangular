@@ -1,0 +1,29 @@
+.menu-superior {
+    background-color: #1e88e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 10px; 
+  }
+  
+  .menu-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-right: 10px; 
+  }
+  

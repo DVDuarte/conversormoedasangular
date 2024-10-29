@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    color: #2c3e50; 
+  }
+  
+  p, li {
+    color: #34495e; 
+  }
+  
+  a {
+    text-decoration: none;
+    color: #1e88e5; 
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #1565c0;
+  }
+  
+  button {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1565c0; 
+  }
+  
+  .conteudo-principal {
+    margin-left: 20px; 
+    padding-top: 80px; 
+    padding-right: 20px; 
+  }
+  
